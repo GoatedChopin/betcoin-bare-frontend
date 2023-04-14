@@ -19,7 +19,8 @@ const SurveyLookup: React.FC  = () => {
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
         event.preventDefault();
-        console.log(pollId)
+        console.log(pollId);
+        setPollId("");
         // contract.methods.getPollInfo().send({id: pollId});
     }
 
