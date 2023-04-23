@@ -1,10 +1,21 @@
 import styles from "./index.module.css";
 import { type NextPage } from "next";
 import SurveyLookup from "../SurveyLookup";
+import SurveyDisplay from "~/SurveyDisplay";
 import Head from "next/head";
-import Link from "next/link";
+// import Web3 from 'web3';
+// import PollBetJson from '~/PollBetContract.json';
+// import Link from "next/link";
+
+// const betcoin_json_interface = PollBetJson;
+// const betcoin_address = "0xc4750e70bd9B5357a125D6066a8fBE94B5Dff2Ee";
+
+// const web3 = new Web3(Web3.givenProvider || "ws://172.31.65.226:8545");
+// var Contract = require('web3-eth-contract');
+// var contract = new Contract(betcoin_json_interface.abi, betcoin_address);
 
 const Home: NextPage = () => {
+  var surveyInfo = true;
   return (
     <>
       <Head>
@@ -19,7 +30,8 @@ const Home: NextPage = () => {
           </h1>
 
           <SurveyLookup />
-
+          { !!surveyInfo && <SurveyDisplay />}
+          
         </div>
       </main>
     </>
